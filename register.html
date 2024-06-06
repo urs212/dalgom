@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+    <!-- 입력 폼 -->
+    <form action="/register" method="post">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="phone">전화번호:</label>
+        <input type="text" id="phone" name="phone"><br><br>
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <!-- 이전 버튼 -->
+        <button onclick="location.href='/'" type="button">이전</button>
+        <button type="submit">회원가입</button>
+    </form>
+</body>
+</html>
